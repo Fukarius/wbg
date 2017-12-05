@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tetris</title>
+<link rel='stylesheet' href='style.css' />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+.jumbotron {
+	background:	url('images/tetris2.png')no-repeat;
+	background-size: cover;
+	display:block;
+	padding:0 !important;
+	margin:0;
+	color:White; 
+}
+</style>
+<body>
+	<div class="container text-center">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Web Games</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#tetris">Tetris</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron horizontal-center" id="tetris">
+			<h1>Tetris</h1>
+			<p>
+				<canvas width='300' height='600'></canvas>
+				<script src='tetris.js'></script>
+				<script src='controller.js'></script>
+				<script src='render.js'></script>
+			</p>
+			<p>Controles: setas do teclado</p>
+
+		</div>
+
+	</div>
+
+
+
+	<script>
+		window.addEventListener("keydown", function(e) {
+			//espaco e setas do teclado
+			if ([ 32, 37, 38, 39, 40 ].indexOf(e.keyCode) > -1) {
+				e.preventDefault();
+			}
+		}, false);
+	</script>
+
+
+</body>
+</html>

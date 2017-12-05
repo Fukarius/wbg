@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+    background: black;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container{
+  width:1025px;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  
+  font: 0/0 a;         
+}
+
+.vertical-center:before {    
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;  
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+  background-color: gold;
+
+  display: inline-block;
+  vertical-align: middle; 
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;       
+}
